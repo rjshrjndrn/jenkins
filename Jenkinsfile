@@ -20,8 +20,11 @@ pipeline {
     }
     stage('show all files') {
       steps {
-        sh '''ls
-printenv'''
+        sh """
+              ls
+              printenv
+              echo $env.env
+           """
       }
     }
   }
