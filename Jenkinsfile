@@ -20,7 +20,8 @@ pipeline {
     }
     stage('show all files') {
       steps {
-        sh 'ls'
+        sh '''ls
+printenv'''
       }
     }
   }
